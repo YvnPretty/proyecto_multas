@@ -1,0 +1,36 @@
+/* public/css/style.css */
+:root{
+    --bg:#f6fbff;
+    --card:#ffffff;
+    --accent:#0b5ed7;
+    --muted:#6b7280;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0b1220; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; padding:2rem}
+  .container{max-width:980px;margin:0 auto;background:var(--card);border-radius:var(--radius);padding:1.4rem;box-shadow:0 8px 30px rgba(11,18,32,0.06);display:flex;flex-direction:column;gap:1rem}
+  .top{display:flex;flex-direction:column;gap:0.25rem}
+  h1{margin:0;color:var(--accent);font-size:1.5rem}
+  .lead{margin:0;color:var(--muted)}
+  .form-grid{display:grid;grid-template-columns:1fr;gap:0.75rem}
+  .card{background:#fbfdff;border-radius:10px;padding:1rem;border:1px solid #eef6ff}
+  label{display:block;font-weight:600;margin-bottom:0.35rem;font-size:0.95rem}
+  input[type="number"],button{width:100%;padding:0.65rem;border-radius:10px;border:1px solid #dbeafc;font-size:1rem}
+  input[type="checkbox"]{width:auto}
+  .controls{display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap}
+  .checkbox-row{display:flex;gap:0.5rem;align-items:center}
+  .small{font-size:0.85rem;color:var(--muted)}
+  button{background:var(--accent);color:#fff;border:0;font-weight:700;cursor:pointer}
+  .result{background:linear-gradient(180deg,#f1f8ff,#ffffff);padding:0.9rem;border-radius:10px;border:1px solid #e6f2ff}
+  .error{color:#b00020;font-weight:700}
+  .footer{text-align:center;color:var(--muted);font-size:0.9rem;padding-top:0.4rem;border-top:1px dashed #eef6ff}
+  
+  /* responsive */
+  @media(min-width:720px){
+    .form-grid{grid-template-columns:repeat(2,1fr);align-items:start}
+    .full{grid-column:1/-1}
+    .controls{justify-content:flex-end}
+    .top{flex-direction:row;justify-content:space-between;align-items:center}
+  }
+  
